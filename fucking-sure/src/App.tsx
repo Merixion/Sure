@@ -92,7 +92,7 @@ function App() {
 								</Object1>
 							))}
 					</DropZoneObject1>
-					<p>מקסים, אתא היום ישנת? אני חושב ש</p>
+					<p>מקסים, אתה היום ישנת? אני חושב ש</p>
 				</div>
 
 				<div className='task'>
@@ -106,7 +106,7 @@ function App() {
 								</Object1>
 							))}
 					</DropZoneObject1>
-					<p>מקסים אתא חושב שראקט עשו סדיסטים? אני חושב</p>
+					<p>מקסים אתה חושב שראקט עשו סדיסטים? אני חושב</p>
 				</div>
 
 				<div className='task'>
@@ -120,7 +120,7 @@ function App() {
 								</Object1>
 							))}
 					</DropZoneObject1>
-					<p>מקסים אתא רוצה לישון? אני עייף</p>
+					<p>מקסים אתה רוצה לישון? אני עייף</p>
 				</div>
 				<button onClick={() => setObjects(objectss)}>לחזור</button>
 			</DndContext>
