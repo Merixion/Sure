@@ -4,3 +4,22 @@
   padding: 2rem;
   text-align: center;
 }
+
+.Home{
+ display: flex;
+ border: 1px solid black;
+ justify-content: end;
+ flex-direction: column;;
+ padding: 10px;
+}
+
+.answers{
+  position: fixed;
+  top: 5px;
+  right: 5px;
+}
+
+.task{
+  display: flex;
+  gap: 20px;
+}

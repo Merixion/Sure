@@ -1,8 +1,8 @@
 import { useDraggable } from "@dnd-kit/core";
 import { CSS } from "@dnd-kit/utilities";
 import styles from './Object1.module.scss'
-export function Object1(){
-  const {attributes, listeners, setNodeRef, transform} = useDraggable({id: 'box'});
+export function Object1({id, children}:{id: string}){
+  const {attributes, listeners, setNodeRef, transform} = useDraggable({id});
 
   const style = { transform: CSS.Translate.toString(transform) };
   return(
@@ -12,7 +12,7 @@ export function Object1(){
     className={styles.Object1}
     style={style}
     >
-      <p>ssss</p>
+      {children}
     </div>
   )
 }
