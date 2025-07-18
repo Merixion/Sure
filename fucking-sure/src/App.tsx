@@ -18,7 +18,7 @@ function App() {
 	];
   const [objects, setObjects] = useState<Object[]>(objectss);
 
-  const handleDragEnd = useCallback(event => {
+  const handleDragEnd = useCallback((event: any )=> {
     const {active, over} = event;
 		if (over?.id === 'trash1') {
 			setObjects(
@@ -73,7 +73,9 @@ function App() {
 						{objects
 							.filter(obj => obj.location === 'trash1')
 							.map(obj => (
-								<Object1 key={obj.id}>{obj.text}</Object1>
+								<Object1 key={obj.id} id={obj.id}>
+									{obj.text}
+								</Object1>
 							))}
 					</DropZoneObject1>
 					<p>מקסים עשיתי את החרא הזה 7 שעות? אני חושב שכן</p>
@@ -85,7 +87,9 @@ function App() {
 						{objects
 							.filter(obj => obj.location === 'trash2')
 							.map(obj => (
-								<Object1 key={obj.id}>{obj.text}</Object1>
+								<Object1 key={obj.id} id={obj.id}>
+									{obj.text}
+								</Object1>
 							))}
 					</DropZoneObject1>
 					<p>מקסים, אתא היום ישנת? אני חושב ש</p>
@@ -97,7 +101,9 @@ function App() {
 						{objects
 							.filter(obj => obj.location === 'trash3')
 							.map(obj => (
-								<Object1 key={obj.id}>{obj.text}</Object1>
+								<Object1 key={obj.id} id={obj.id}>
+									{obj.text}
+								</Object1>
 							))}
 					</DropZoneObject1>
 					<p>מקסים אתא חושב שראקט עשו סדיסטים? אני חושב</p>
@@ -109,12 +115,14 @@ function App() {
 						{objects
 							.filter(obj => obj.location === 'trash4')
 							.map(obj => (
-								<Object1 key={obj.id}>{obj.text}</Object1>
+								<Object1 key={obj.id} id={obj.id}>
+									{obj.text}
+								</Object1>
 							))}
 					</DropZoneObject1>
 					<p>מקסים אתא רוצה לישון? אני עייף</p>
 				</div>
-      <button onClick={()=> setObjects(objectss)}>לחזור</button>
+				<button onClick={() => setObjects(objectss)}>לחזור</button>
 			</DndContext>
 		</div>
 	);
